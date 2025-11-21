@@ -324,16 +324,16 @@ $STD pnpm --filter @immich/sdk --filter @immich/cli build
 $STD pnpm --filter @immich/cli --prod --no-optional deploy "$APP_DIR"/cli
 
 # plugins
-cd "$SRC_DIR"
-#$STD mise trust --ignore ./mise.toml
-$STD mise trust ./mise.toml
-cd plugins
-$STD mise install
-$STD mise run build
-mkdir -p "$PLUGIN_DIR"
-cp -r ./dist "$PLUGIN_DIR"/dist
-cp ./manifest.json "$PLUGIN_DIR"
-msg_ok "Installed Immich Server, Web and Plugin Components"
+    # cd "$SRC_DIR"
+    # $STD mise trust --ignore ./mise.toml
+    # $STD mise trust ./mise.toml
+    # cd plugins
+    # $STD mise install
+    # $STD mise run build
+    # mkdir -p "$PLUGIN_DIR"
+    # cp -r ./dist "$PLUGIN_DIR"/dist
+    # cp ./manifest.json "$PLUGIN_DIR"
+    # msg_ok "Updated ${APP} server, web, cli and plugins"
 
 cd "$SRC_DIR"/machine-learning
 $STD useradd -U -s /usr/sbin/nologin -r -M -d "$INSTALL_DIR" immich
