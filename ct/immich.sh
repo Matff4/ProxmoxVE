@@ -189,17 +189,17 @@ EOF
     cd "$APP_DIR"
     mv "$INSTALL_DIR"/start.sh "$APP_DIR"/bin
 
-    # plugins
-    cd "$SRC_DIR"
-    $STD mise trust --ignore ./mise.toml
-    $STD mise trust ./mise.toml
-    cd plugins
-    $STD mise install
-    $STD mise run build
-    mkdir -p "$PLUGIN_DIR"
-    cp -r ./dist "$PLUGIN_DIR"/dist
-    cp ./manifest.json "$PLUGIN_DIR"
-    msg_ok "Updated ${APP} server, web, cli and plugins"
+# plugins
+    # cd "$SRC_DIR"
+    # $STD mise trust --ignore ./mise.toml
+    # $STD mise trust ./mise.toml
+    # cd plugins
+    # $STD mise install
+    # $STD mise run build
+    # mkdir -p "$PLUGIN_DIR"
+    # cp -r ./dist "$PLUGIN_DIR"/dist
+    # cp ./manifest.json "$PLUGIN_DIR"
+    # msg_ok "Updated ${APP} server, web, cli and plugins"
 
     cd "$SRC_DIR"/machine-learning
     mkdir -p "$ML_DIR" && chown -R immich:immich "$ML_DIR"
