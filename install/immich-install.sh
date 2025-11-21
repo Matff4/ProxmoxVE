@@ -325,8 +325,8 @@ $STD pnpm --filter @immich/cli --prod --no-optional deploy "$APP_DIR"/cli
 
 # plugins
 cd "$SRC_DIR"
-$STD mise trust --ignore ./mise.toml
-$STD mise trust ./plugins/mise.toml
+#$STD mise trust --ignore ./mise.toml
+$STD mise trust ./mise.toml
 cd plugins
 $STD mise install
 $STD mise run build
