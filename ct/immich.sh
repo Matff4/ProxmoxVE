@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://raw.githubusercontent.com/Matff4/ProxmoxVE/main/misc/build.func)
 # Copyright (c) 2021-2025 community-scripts ORG
 # Author: vhsdream
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
@@ -192,7 +192,7 @@ EOF
     # plugins
     cd "$SRC_DIR"
     $STD mise trust --ignore ./mise.toml
-    $STD mise trust ./plugins/mise.toml
+    $STD mise trust ./mise.toml
     cd plugins
     $STD mise install
     $STD mise run build
